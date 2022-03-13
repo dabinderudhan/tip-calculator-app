@@ -1,0 +1,48 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: $color-neutral-light;
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.container {
+  max-width: 375px;
+  min-width: max-content;
+  gap: 3rem;
+}
+
+// .form {
+//   background-color: $color-white;
+//   border-radius: 20px;
+//   padding: 2rem;
+//   max-width: inherit;
+//   gap: 2rem;
+// }
+
+li {
+  list-style: none;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+@media (min-width: 925px) {
+  .container {
+    max-width: max-content;
+    min-width: 100%;
+    gap: 3rem;
+  }
+}

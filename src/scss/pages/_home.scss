@@ -1,0 +1,152 @@
+.form {
+  background-color: $color-white;
+  border-radius: 20px;
+  padding: 2rem;
+  max-width: inherit;
+  gap: 2rem;
+
+  .input {
+    gap: 2rem;
+
+    &-data {
+      align-items: start;
+      width: 100%;
+      gap: 0.5rem;
+
+      &--heading {
+        font-size: 1rem;
+      }
+
+      &--amtbox {
+        width: 100%;
+        position: relative;
+
+        &_value {
+          width: inherit;
+          cursor: pointer;
+          background-color: $color-neutral-lighter;
+          color: $color-neutral-darkest;
+          border: 2px solid transparent;
+          border-radius: 10px;
+          padding: 0.5rem 1rem;
+          font-family: $ff-default;
+          font-size: 1.5rem;
+          text-align: right;
+
+          &::placeholder {
+            font-family: $ff-default;
+            color: $color-neutral-light;
+            text-align: right;
+          }
+
+          &:focus {
+            outline: none;
+            border: 2px solid $color-neutral-darker;
+          }
+        }
+
+        &_img {
+          position: absolute;
+          top: 50%;
+          left: 1rem;
+          transform: translateY(-50%);
+          width: 5%;
+        }
+      }
+
+      &--error {
+        color: red;
+        opacity: 0;
+      }
+
+      &--btns {
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: start;
+
+        &_btn {
+          flex: 1 1 100px;
+
+          &-custom {
+            &:focus {
+              outline: none;
+              border: 2px solid $color-neutral-darker;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .output {
+    background-color: $color-neutral-darkest;
+    border-radius: 20px;
+    padding: 1.5rem;
+    gap: 2rem;
+
+    &-data {
+      justify-content: space-between;
+
+      &--heading {
+        align-items: start;
+
+        &_name {
+          color: $color-neutral-light;
+        }
+
+        &_text {
+          font-size: 0.8rem;
+        }
+      }
+
+      &--amount {
+        font-size: 2.3rem;
+        color: $color-primary;
+        justify-content: end;
+        max-width: 100%;
+        font-weight: normal;
+      }
+    }
+
+    &-reset {
+      width: 100%;
+      // margin-top: 2rem;
+      background-color: hsl(183, 100%, 20%);
+      color: $color-neutral-darker;
+      text-transform: uppercase;
+      font-size: 1rem;
+    }
+  }
+}
+
+.displayError {
+  border: 2px solid red;
+}
+
+.heading-wrapper {
+  justify-content: space-between;
+}
+
+.form .active {
+  background-color: $color-primary;
+  color: $color-neutral-darkest;
+}
+
+@media (min-width: 925px) {
+  .form {
+    flex-direction: row;
+    max-width: 925px;
+    min-width: none;
+
+    .output {
+      align-self: stretch;
+      justify-content: space-evenly;
+
+      &-reset {
+        display: block;
+        align-self: end;
+        margin-top: 2rem;
+      }
+    }
+  }
+}

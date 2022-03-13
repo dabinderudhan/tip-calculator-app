@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- external css stylesheet -->
+    <link rel="stylesheet" href="./dist/css/main.css" />
+
+    <!-- external JS -->
+    <script defer src="./src/js/index.js"></script>
+
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body class="flex flex-col">
+    <main class="container flex flex-col">
+      <img class="logo" src="./src/images/logo.svg" alt="" aria-hidden="true" />
+      <form class="form flex flex-col" action="/">
+        <ul class="input flex flex-col">
+          <li class="input-data flex flex-col">
+            <label class="input-data--heading" for="bill">Bill</label>
+            <div class="input-data--amtbox">
+              <input
+                class="input-data--amtbox_value bill-value"
+                type="number"
+                placeholder="0"
+              />
+              <img
+                class="input-data--amtbox_img"
+                src="./src/images/icon-dollar.svg"
+                alt=""
+                aria-hidden="true"
+              />
+            </div>
+          </li>
+          <li class="input-data flex flex-col">
+            <label class="input-data--heading" for="select-tip"
+              >Select Tip %</label
+            >
+            <div class="input-data--btns flex">
+              <input
+                type="button"
+                value="5%"
+                data-id="5"
+                class="btn input-data--btns_btn"
+              />
+              <input
+                type="button"
+                value="10%"
+                data-id="10"
+                class="btn input-data--btns_btn"
+              />
+              <input
+                type="button"
+                value="15%"
+                data-id="15"
+                class="btn input-data--btns_btn"
+              />
+              <input
+                type="button"
+                value="25%"
+                data-id="25"
+                class="btn input-data--btns_btn"
+              />
+              <input
+                type="button"
+                value="50%"
+                data-id="50"
+                class="btn input-data--btns_btn"
+              />
+              <input
+                class="btn btn-custom input-data--btns_btn input-data--btns_btn-custom"
+                type="number"
+                placeholder="Custom"
+                data-id="custom"
+              />
+            </div>
+          </li>
+          <li class="input-data flex flex-col">
+            <div class="heading-wrapper flex">
+              <label class="input-data--heading" for="people"
+                >Number of People</label
+              >
+              <p class="input-data--error">Can't be zero</p>
+            </div>
+            <div class="input-data--amtbox">
+              <input
+                class="input-data--amtbox_value people-no"
+                type="number"
+                placeholder="0"
+              />
+              <img
+                class="input-data--amtbox_img"
+                src="./src/images/icon-person.svg"
+                alt=""
+                aria-hidden="true"
+              />
+            </div>
+          </li>
+        </ul>
+        <ul class="output flex flex-col">
+          <li class="output-data flex">
+            <div class="output-data--heading flex flex-col">
+              <p class="output-data--heading_name">Tip Amount</p>
+              <p class="output-data--heading_text">/ person</p>
+            </div>
+            <div class="output-data--amount flex">
+              &#36;
+              <span class="output-tip--amount_value tip-amount">0.00</span>
+            </div>
+          </li>
+          <li class="output-data flex">
+            <div class="output-data--heading flex flex-col">
+              <p class="output-data--heading_name">Total</p>
+              <p class="output-data--heading_text">/ person</p>
+            </div>
+            <div class="output-data--amount flex">
+              &#36;
+              <span class="output-tip--amount_value total-amount">0.00</span>
+            </div>
+          </li>
+          <button class="btn output-reset">Reset</button>
+        </ul>
+      </form>
+    </main>
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://github.com/dabinderudhan" target="_blank"
+        >Dabinder Udhan</a
+      >.
+    </footer>
+  </body>
+</html>

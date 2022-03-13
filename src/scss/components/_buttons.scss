@@ -1,0 +1,38 @@
+.btn {
+  cursor: pointer;
+  border: 2px solid transparent;
+  background-color: $color-neutral-darkest;
+  color: $color-neutral-lighter;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  font-weight: $fw-bold;
+
+  &:hover,
+  &:active {
+    background-color: $color-primary;
+    color: $color-neutral-darkest;
+  }
+
+  &-custom {
+    background-color: $color-neutral-lighter;
+    color: $color-neutral-darkest;
+    text-align: right;
+    width: inherit;
+
+    &::placeholder {
+      color: $color-neutral-darker;
+      font-family: $ff-default;
+      text-align: right;
+    }
+
+    &:hover {
+      background-color: $color-neutral-lighter;
+    }
+  }
+}
+
+.active {
+  background-color: $color-primary;
+  color: $color-neutral-darkest;
+}
