@@ -31,13 +31,10 @@
   <body class="flex flex-col">
     <main class="container flex flex-col">
       <img class="logo" src="./src/images/logo.svg" alt="" aria-hidden="true" />
-      <form
-        class="form flex flex-col"
-        action="https://dabinderudhan.github.io/tip-calculator-app/"
-      >
+      <form class="form flex flex-col">
         <ul class="input flex flex-col">
           <li class="input-data flex flex-col">
-            <label class="input-data--heading" for="bill">Bill</label>
+            <label class="input-data--heading">Bill</label>
             <div class="input-data--amtbox">
               <input
                 class="input-data--amtbox_value bill-value"
@@ -53,9 +50,7 @@
             </div>
           </li>
           <li class="input-data flex flex-col">
-            <label class="input-data--heading" for="select-tip"
-              >Select Tip %</label
-            >
+            <label class="input-data--heading">Select Tip %</label>
             <div class="input-data--btns flex">
               <input
                 type="button"
@@ -97,9 +92,7 @@
           </li>
           <li class="input-data flex flex-col">
             <div class="heading-wrapper flex">
-              <label class="input-data--heading" for="people"
-                >Number of People</label
-              >
+              <label class="input-data--heading">Number of People</label>
               <p class="input-data--error">Can't be zero</p>
             </div>
             <div class="input-data--amtbox">
@@ -138,7 +131,9 @@
               <span class="output-tip--amount_value total-amount">0.00</span>
             </div>
           </li>
-          <button class="btn output-reset">Reset</button>
+          <li class="btn output-reset flex">
+            <button class="output-reset-btn">Reset</button>
+          </li>
         </ul>
       </form>
     </main>

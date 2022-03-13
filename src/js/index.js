@@ -97,3 +97,15 @@ tipValue.forEach((btn) => {
     if (btn.dataset.id !== "custom") btn.classList.add("active");
   });
 });
+
+btnReset.addEventListener("click", function () {
+  billAmount = 0;
+
+  customTip = 0;
+  tipPercent = "";
+
+  noOfPeople = "";
+
+  tipPerPerson = 0;
+  billPerPerson = 0;
+});
