@@ -10,7 +10,7 @@ body {
   min-height: 100vh;
   background-color: $color-neutral-light;
   gap: 2rem;
-  margin: 3rem 0;
+  margin: 3rem;
 }
 
 .container {
@@ -40,6 +40,10 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 @media (min-width: 925px) {
+  body {
+    margin: 0;
+  }
+
   .container {
     max-width: max-content;
     min-width: 100%;
